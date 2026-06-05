@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Materie</title>
+    <meta name="description" content="Indice delle materie del quinto anno di Informatica presso l'IIS Marconi Pieralisi.">
+    <meta property="og:title" content="Materie — Luca Tonelli">
+    <style>
+      .materie-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+      }
+      .materia-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        text-decoration: none;
+        color: var(--text);
+        transition: border-color 0.2s, background 0.2s, transform 0.2s, box-shadow 0.2s;
+        position: relative;
+        overflow: hidden;
+      }
+      .materia-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--neon), var(--cyan));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+      .materia-card:hover::before { transform: scaleX(1); }
+      .materia-card:hover {
+        border-color: var(--border-hot);
+        background: var(--surface-2);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0,255,140,0.07);
+      }
+      .materia-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        display: block;
+      }
+      .materia-card-body {
+        padding: 1.25rem 1.4rem 1.4rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .materia-card-num {
+        color: var(--neon);
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        margin-bottom: 0.4rem;
+      }
+      .materia-card h3 {
+        margin: 0 0 0.65rem;
+        font-family: var(--font-hud);
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: 0.04em;
+      }
+      .materia-card p {
+        margin: 0;
+        color: var(--text-muted);
+        font-size: 0.84rem;
+        font-family: var(--font-mono);
+        line-height: 1.75;
+        flex: 1;
+      }
+      .materia-card-arrow {
+        margin-top: 1rem;
+        color: var(--neon);
+        font-size: 0.75rem;
+        font-family: var(--font-mono);
+        letter-spacing: 0.08em;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link sr-only" href="#main-content">Vai al contenuto</a>
+<header class="site-header">
+  <div class="header-inner">
+    <button class="nav-toggle" aria-controls="nav-list" aria-expanded="false" aria-label="Apri menu">
+      <span aria-hidden="true"></span>
+    </button>
+    <nav class="nav-wrap" id="nav-list">
+      <a class="nav-link" href="index.html#home">Home</a>
+      <div class="nav-item nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="materie.html">Materie</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-link" href="materia-informatica.html">Informatica</a>
+          <a class="dropdown-link" href="materia-sistemi-reti.html">Sistemi e Reti</a>
+          <a class="dropdown-link" href="materia-tpsit.html">TPSIT</a>
+          <a class="dropdown-link" href="materia-gpoi.html">GPOI</a>
+          <a class="dropdown-link" href="materia-matematica.html">Matematica</a>
+          <a class="dropdown-link" href="materia-ia.html">Intelligenza Artificiale</a>
+          <a class="dropdown-link" href="materia-italiano.html">Italiano</a>
+          <a class="dropdown-link" href="materia-storia.html">Storia</a>
+          <a class="dropdown-link" href="materia-inglese.html">Inglese</a>
+          <a class="dropdown-link" href="materia-scienze-motorie.html">Scienze Motorie</a>
+          <a class="dropdown-link" href="materia-religione.html">Religione</a>
+        </div>
+      </div>
+      <a class="nav-link" href="educazione-civica.html">Educazione Civica</a>
+      <a class="nav-link" href="fsl.html">FSL</a>
+    </nav>
+  </div>
+</header>
+
+    <main id="main-content">
+      <section class="section reveal">
+        <div class="section-inner">
+          <p class="eyebrow">Materie</p>
+          <h1 class="section-title">Le materie del mio quinto anno</h1>
+          <p class="section-subtitle">Il piano di studi del 5° anno dell'IIS Marconi Pieralisi comprende materie tecnico-scientifiche e umanistiche. Per ciascuna trovi l'argomento che mi ha colpito di più e racconta il mio percorso.</p>
+
+          <div class="materie-grid">
+
+            <a class="materia-card reveal" href="materia-informatica.html">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=700&q=80" alt="Informatica">
+              <div class="materia-card-body">
+                <span class="materia-card-num">01 — INFORMATICA</span>
+                <h3>Applicazioni Web & Cybersecurity</h3>
+                <p>Sviluppo backend PHP con CRUD, sicurezza applicata: SQL Injection, XSS e security audit del codice di gruppo.</p>
+                <span class="materia-card-arrow">Leggi <i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a class="materia-card reveal" href="materia-sistemi-reti.html">
+              <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=700&q=80" alt="Sistemi e Reti">
+              <div class="materia-card-body">
+                <span class="materia-card-num">02 — SISTEMI E RETI</span>
+                <h3>Sicurezza & Protocolli WiFi</h3>
+                <p>Crittografia, VPN, VLAN e analisi comparata dei protocolli WEP, WPA, WPA2 e WPA3 con le loro vulnerabilità.</p>
+                <span class="materia-card-arrow">Leggi <i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a class="materia-card reveal" href="materia-tpsit.html">
+              <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=700&q=80" alt="TPSIT">
+              <div class="materia-card-body">
+                <span class="materia-card-num">03 — TPSIT</span>
+                <h3>Sviluppo Android</h3>
+                <p>Activity, ciclo di vita, layout XML, event handling. Progetto concreto: calcolatrice Android da zero in Java.</p>
+                <span class="materia-card-arrow">Leggi <i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a class="materia-card reveal" href="materia-gpoi.html">
+              <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=700&q=80" alt="GPOI">
+              <div class="materia-card-body">
+                <span class="materia-card-num">04 — GPOI</span>
+                <h3>Gestione Progetti Software</h3>
+                <p>Analisi dei requisiti, UML, diagrammi di Gantt e il progetto reale Scout Admin gestito in tutte le sue fasi.</p>
+                <span class="materia-card-arrow">Leggi <i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a class="materia-card reveal" href="materia-matematica.html">
+              <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=700&q=80" alt="Matematica">
+              <div class="materia-card-body">
+                <span class="materia-card-num">05 — MATEMATICA</span>
+                <h3>Calcolo delle Probabilità</h3>
+                <p>Probabilità condizionata, eventi indipendenti, teorema di Bayes, variabili casuali e distribuzioni.</p>
+                <span class="materia-card-arrow">Leggi <i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a class="materia-card reveal" href="materia-ia.html">
+              <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=700&q=80" alt="Intelligenza Artificiale">
+              <div class="materia-card-body">
+                <span class="materia-card-num">06 — INTELLIGENZA ARTIFICIALE</span>
+                <h3>Machine Learning & Deep Learning</h3>
+                <p>Supervised, unsupervised, reti neurali, backpropagation, overfitting. Rete neurale reale addestrata su Google Colab.</p>
+                <span class="materia-card-arrow">Leggi <i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a class="materia-card reveal" href="materia-italiano.html">
+              <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=700&q=80" alt="Italiano">
+              <div class="materia-card-body">
+                <span class="materia-card-num">07 — ITALIANO</span>
+                <h3>Il Verismo e Giovanni Verga</h3>
+                <p>Impersonalità, discorso indiretto libero, tema della roba. Opere lette: Rosso Malpelo, La Roba, I Malavoglia e altre.</p>
+                <span class="materia-card-arrow">Leggi <i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a class="materia-card reveal" href="materia-storia.html">
+              <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?w=700&q=80" alt="Storia">
+              <div class="materia-card-body">
+                <span class="materia-card-num">08 — STORIA</span>
+                <h3>La crisi del 1929</h3>
+                <p>Il crollo di Wall Street, la propagazione in Europa, l'impatto sulla Germania e il New Deal di Roosevelt.</p>
+                <span class="materia-card-arrow">Leggi <i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a class="materia-card reveal" href="materia-inglese.html">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&q=80" alt="Inglese">
+              <div class="materia-card-body">
+                <span class="materia-card-num">09 — INGLESE</span>
+                <h3>Alan Turing</h3>
+                <p>Enigma e la Bombe, la Turing Machine, il Turing Test e la storia umana di uno dei padri dell'informatica.</p>
+                <span class="materia-card-arrow">Leggi <i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a class="materia-card reveal" href="materia-scienze-motorie.html">
+              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&q=80" alt="Scienze Motorie">
+              <div class="materia-card-body">
+                <span class="materia-card-num">10 — SCIENZE MOTORIE</span>
+                <h3>Il Cuore e la Circolazione</h3>
+                <p>Struttura anatomica, piccola e grande circolazione, frequenza cardiaca e adattamenti fisiologici all'allenamento.</p>
+                <span class="materia-card-arrow">Leggi <i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+            <a class="materia-card reveal" href="materia-religione.html">
+              <img src="https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?w=700&q=80" alt="Religione">
+              <div class="materia-card-body">
+                <span class="materia-card-num">11 — RELIGIONE</span>
+                <h3>Etica e Valori</h3>
+                <p>Rapporto fede e ragione, bioetica, valore della persona e confronto tra tradizioni religiose nella società contemporanea.</p>
+                <span class="materia-card-arrow">Leggi <i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© Luca Tonelli - Anno Scolastico 2025/2026</p>
+    <nav class="footer-social" aria-label="Social media">
+      <a href="mailto:lucatonelli07@gmail.com" title="Email" target="_blank" rel="noreferrer noopener">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://github.com/LucaTons" title="GitHub" target="_blank" rel="noreferrer noopener">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.instagram.com/luca_tons7" title="Instagram" target="_blank" rel="noreferrer noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </nav>
+  </div>
+</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

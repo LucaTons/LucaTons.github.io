@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Intelligenza Artificiale</title>
+    <meta name="description" content="Il Machine Learning mi ha colpito perché l’idea che un sistema possa imparare dai dati e migliorare le proprie risposte è qualcosa che, prima di studiarlo, sembrava quasi fantascienza.">
+    <meta property="og:title" content="Intelligenza Artificiale — Luca Tonelli">
+  </head>
+  <body>
+    <a class="skip-link sr-only" href="#main-content">Vai al contenuto</a>
+<header class="site-header">
+  <div class="header-inner">
+    <button class="nav-toggle" aria-controls="nav-list" aria-expanded="false" aria-label="Apri menu">
+      <span aria-hidden="true"></span>
+    </button>
+    <nav class="nav-wrap" id="nav-list">
+      <a class="nav-link" href="index.html#home">Home</a>
+      <div class="nav-item nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="materie.html">Materie</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-link" href="materia-informatica.html">Informatica</a>
+          <a class="dropdown-link" href="materia-sistemi-reti.html">Sistemi e Reti</a>
+          <a class="dropdown-link" href="materia-tpsit.html">TPSIT</a>
+          <a class="dropdown-link" href="materia-gpoi.html">GPOI</a>
+          <a class="dropdown-link" href="materia-matematica.html">Matematica</a>
+          <a class="dropdown-link" href="materia-ia.html">Intelligenza Artificiale</a>
+          <a class="dropdown-link" href="materia-italiano.html">Italiano</a>
+          <a class="dropdown-link" href="materia-storia.html">Storia</a>
+          <a class="dropdown-link" href="materia-inglese.html">Inglese</a>
+          <a class="dropdown-link" href="materia-scienze-motorie.html">Scienze Motorie</a>
+          <a class="dropdown-link" href="materia-religione.html">Religione</a>
+        </div>
+      </div>
+      <a class="nav-link" href="educazione-civica.html">Educazione Civica</a>
+      <a class="nav-link" href="fsl.html">FSL</a>
+    </nav>
+  </div>
+</header>
+    <main id="main-content">
+      <section class="section reveal">
+        <div class="section-inner">
+          <p class="eyebrow">Materia</p>
+          <h1 class="section-title">Intelligenza Artificiale</h1>
+          <p class="section-subtitle"></p>
+          <div class="post-content reveal">
+            <h2>Il Machine Learning</h2>
+            <p>Il Machine Learning mi ha colpito perché l'idea che un sistema possa imparare dai dati e migliorare le proprie risposte è qualcosa che, prima di studiarlo, sembrava quasi fantascienza. Capire che dietro c'è un processo matematico preciso e misurabile ha cambiato il modo in cui guardo questi strumenti.</p>
+            <h2>Tipi di apprendimento</h2>
+            <p><strong>Apprendimento supervisionato:</strong> il modello viene addestrato su un dataset etichettato, cioè dove ogni esempio ha già la risposta corretta. Il modello impara ad associare input e output e poi generalizza su dati nuovi. Esempi: classificazione di email come spam/non spam, riconoscimento di immagini.</p>
+            <p><strong>Apprendimento non supervisionato:</strong> il dataset non ha etichette. Il modello deve trovare da solo strutture e pattern nei dati, come raggruppare elementi simili (clustering). Esempi: segmentazione di clienti, compressione dei dati.</p>
+            <p><strong>Apprendimento per rinforzo:</strong> un agente impara interagendo con un ambiente, ricevendo ricompense per le azioni giuste e penalità per quelle sbagliate. Usato nei videogiochi e nella robotica.</p>
+            <h2>Reti neurali e Deep Learning</h2>
+            <p>Le reti neurali sono modelli ispirati al cervello umano, composti da neuroni artificiali organizzati in strati (layer). Ogni neurone prende degli input, li moltiplica per dei pesi, li somma e applica una funzione di attivazione. L'addestramento aggiorna i pesi tramite backpropagation: l'errore del modello viene propagato all'indietro e i pesi vengono corretti in direzione della riduzione dell'errore.</p>
+            <p>Problemi comuni durante l'addestramento: l'overfitting si verifica quando il modello impara troppo bene i dati di training e non riesce a generalizzare su dati nuovi. L'underfitting si verifica quando il modello è troppo semplice. Per contrastarli si usano tecniche come la regolarizzazione, il dropout e la separazione del dataset in training, validation e test set.</p>
+            <h2>Il progetto: Deep Learning su Google Colab</h2>
+            <p>Un esempio concreto è stato costruire e addestrare una rete neurale reale su Google Colab: abbiamo scelto il dataset, progettato l'architettura, definito la funzione di perdita e l'ottimizzatore, e osservato le metriche di accuratezza migliorare epoca dopo epoca durante l'addestramento. Vedere il modello convergere verso una soluzione, capendo perché certe scelte di architettura funzionano meglio di altre, mi ha fatto capire davvero cosa significa "far imparare" una macchina.</p>
+            <p>Ho scelto questo argomento perché l'intelligenza artificiale è già ovunque nella vita di tutti i giorni e capire come funziona davvero — non solo usarla — è sempre più importante.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© Luca Tonelli - Anno Scolastico 2025/2026</p>
+    <nav class="footer-social" aria-label="Social media">
+      <a href="mailto:lucatonelli07@gmail.com" title="Email" target="_blank" rel="noreferrer noopener">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://github.com/LucaTons" title="GitHub" target="_blank" rel="noreferrer noopener">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.instagram.com/luca_tons7" title="Instagram" target="_blank" rel="noreferrer noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </nav>
+  </div>
+</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

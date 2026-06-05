@@ -50,14 +50,21 @@
           <p class="section-subtitle"></p>
           <div class="post-content reveal">
             <h2>Le applicazioni Web</h2>
-            <p>Quest'anno ho studiato come vengono sviluppate le applicazioni web: dai database al PHP, fino alla collaborazione in gruppo su un progetto reale. Il percorso ci ha portato a costruire un backend completo con operazioni CRUD su più tabelle, usando PHP come linguaggio lato server e MySQL per la gestione dei dati.</p>
-            <p>Abbiamo strutturato il progetto separando la logica applicativa dalle query SQL attraverso un livello di astrazione sul database: invece di scrivere query direttamente nei file che gestiscono le richieste HTTP, abbiamo creato classi dedicate che incapsulano tutte le operazioni sui dati. Questo rende il codice più ordinato, più facile da testare e più sicuro.</p>
-            <h2>Cybersecurity applicata al web</h2>
-            <p>La parte che mi ha colpito di più è stata la cybersecurity applicata al web. Ho analizzato e testato vulnerabilità reali:</p>
-            <p><strong>SQL Injection:</strong> si verifica quando l'input dell'utente viene inserito direttamente in una query SQL senza sanificazione. Un attaccante può manipolare la query per estrarre dati, bypassare autenticazioni o cancellare tabelle. La contromisura corretta sono i prepared statements, che separano il codice SQL dai dati.</p>
-            <p><strong>Cross-Site Scripting (XSS):</strong> consente di iniettare script JavaScript nelle pagine viste da altri utenti. Se un'applicazione mostra input dell'utente senza fare l'escape, chiunque può inserire codice che verrà eseguito nel browser delle vittime. La contromisura è fare sempre l'escape dell'output con funzioni come <code>htmlspecialchars()</code>.</p>
-            <p>Una parte del lavoro è stata fare un security audit del codice del gruppo: ho trovato problemi reali come hash delle password esposti nelle risposte API, gestione degli errori che rivelava la struttura del database, e routing non protetto che permetteva accessi non autorizzati. Documentare ogni problema con un payload di test e riscrivere la parte corretta è stato più formativo che scriverlo da zero.</p>
-            <p>La cosa che mi ha interessato di più è stata ragionare non solo come sviluppatore, ma anche come un attaccante che cerca di sfruttare quelle vulnerabilità: è un cambio di prospettiva che cambia completamente il modo in cui si scrive codice.</p>
+            <p>L'argomento che mi ha colpito di più durante l'anno è stato lo sviluppo delle applicazioni web. Abbiamo costruito un backend completo usando PHP come linguaggio lato server e MySQL per i dati, implementando le operazioni CRUD:</p>
+            <ul>
+              <li><strong>Create:</strong> aggiunge nuovi dati tramite il metodo POST</li>
+              <li><strong>Read:</strong> legge e recupera i dati tramite GET</li>
+              <li><strong>Update:</strong> modifica i dati esistenti tramite PUT</li>
+              <li><strong>Delete:</strong> elimina i dati tramite DELETE</li>
+            </ul>
+            <p>Abbiamo usato il PHP per il backend, cioè della logica del server e della gestione dei dati, mentre HTML lo abbiamo usato come frontend per testare le rotte create dal backend, inviando richieste e verificando le risposte. Oltre a creare il backend e il frontend, mi sono occupato personalmente è stata testare la sicurezza del sito, analizzando il codice del gruppo cercando vulnerabilità reali. Ne ho trovate diverse: hash delle password esposti nelle risposte API, gestione degli errori che rivelava la struttura del database e routing non protetto che permetteva accessi non autorizzati.</p>
+            <h2>Test che ho svolto per testare la sicurezza</h2>
+            <p>Le due vulnerabilità principali che ho testato sono state:</p>
+            <ul>
+              <li><p><strong>SQL Injection:</strong> si verifica quando l'input dell'utente viene inserito direttamente in una query SQL senza controlli. Un attaccante può manipolare la query per estrarre dati o bypassare l'autenticazione. La contromisura corretta sono i prepared statements, che separano il codice SQL dai dati.</p></li>
+              <li><p><strong>Cross-Site Scripting (XSS):</strong> permette di iniettare codice JavaScript nelle pagine viste dagli altri utenti, che viene eseguito nel loro browser senza che se ne accorgano. La contromisura è fare sempre l'escape dell'output con funzioni come <code>htmlspecialchars()</code>.</p></li>
+            </ul>
+            <p>La cosa che mi ha interessato di più è stata ragionare non solo come sviluppatore ma anche come un attaccante che cerca di sfruttare quelle vulnerabilità. È un cambio di prospettiva che cambia completamente il modo in cui si scrive codice.</p>
           </div>
         </div>
       </section>
